@@ -2,6 +2,10 @@ source "https://rubygems.org"
 
 # Use main development branch of Rails
 gem "rails", github: "rails/rails", branch: "main"
+
+# Reproduce a Gemfile dependency loading Active Model before the application exists.
+gem "early_active_model_loader", path: "gems/early_active_model_loader"
+
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
 # Use sqlite3 as the database for Active Record
