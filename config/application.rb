@@ -11,6 +11,10 @@ module RailsSampleFor56201
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 8.2
 
+    # Turn an observed early load into an exception. The Gemfile dependency has
+    # already loaded Active Model above, before this application exists.
+    config.action_on_early_load_hook = :raise
+
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.
